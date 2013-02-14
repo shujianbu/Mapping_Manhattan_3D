@@ -12,3 +12,8 @@ Tools:
 - Goblin XNA 
 - C# 
 - Excel 
+
+Team: 
+- Pucong Han
+- Robert Walport 
+- Nanzhu Wang
