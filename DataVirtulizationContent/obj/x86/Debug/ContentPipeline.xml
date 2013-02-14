@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>Arial.spritefont</Source>
+      <Name>Arial</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Pucong Han\Desktop\DataVirtulization\DataVirtulization\DataVirtulization\bin\x86\Debug\Content\Arial.xnb</Output>
+      <Time>2012-04-10T12:40:43.1862532+08:00</Time>
+    </Item>
+    <Item>
+      <Source>ArialLarge.spritefont</Source>
+      <Name>ArialLarge</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Pucong Han\Desktop\DataVirtulization\DataVirtulization\DataVirtulization\bin\x86\Debug\Content\ArialLarge.xnb</Output>
+      <Time>2012-04-12T09:36:28.0851994+08:00</Time>
+    </Item>
+    <Item>
+      <Source>manhattan.jpg</Source>
+      <Name>manhattan</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Pucong Han\Desktop\DataVirtulization\DataVirtulization\DataVirtulization\bin\x86\Debug\Content\manhattan.xnb</Output>
+      <Time>2012-04-12T09:26:09.4908178+08:00</Time>
+    </Item>
+    <Item>
+      <Source>education.fbx</Source>
+      <Name>education</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Pucong Han\Desktop\DataVirtulization\DataVirtulization\DataVirtulization\bin\x86\Debug\Content\education.xnb</Output>
+      <Time>2012-04-19T13:18:11.3819446+08:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\education_0.xml</Key>
+        <Value>2012-04-19T13:18:21.1315022+08:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>employment.fbx</Source>
+      <Name>employment</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Pucong Han\Desktop\DataVirtulization\DataVirtulization\DataVirtulization\bin\x86\Debug\Content\employment.xnb</Output>
+      <Time>2012-04-19T13:18:11.440948+08:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\employment_0.xml</Key>
+        <Value>2012-04-19T13:18:21.3035121+08:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>housing.fbx</Source>
+      <Name>housing</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Pucong Han\Desktop\DataVirtulization\DataVirtulization\DataVirtulization\bin\x86\Debug\Content\housing.xnb</Output>
+      <Time>2012-04-19T13:18:11.4469483+08:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\housing_0.xml</Key>
+        <Value>2012-04-19T13:18:21.4215188+08:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>education.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\education_0.xml</Output>
+      <Time>2012-04-19T13:18:11.3819446+08:00</Time>
+    </Item>
+    <Item>
+      <Source>employment.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\employment_0.xml</Output>
+      <Time>2012-04-19T13:18:11.440948+08:00</Time>
+    </Item>
+    <Item>
+      <Source>housing.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\housing_0.xml</Output>
+      <Time>2012-04-19T13:18:11.4469483+08:00</Time>
+    </Item>
+    <Item>
+      <Source>model10001.jpg</Source>
+      <Name>model10001</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Pucong Han\Desktop\DataVirtulization\DataVirtulization\DataVirtulization\bin\x86\Debug\Content\model10001.xnb</Output>
+      <Time>2012-04-19T13:21:38.6127975+08:00</Time>
+    </Item>
+    <Item>
+      <Source>demographics.fbx</Source>
+      <Name>demographics</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Pucong Han\Desktop\DataVirtulization\DataVirtulization\DataVirtulization\bin\x86\Debug\Content\demographics.xnb</Output>
+      <Time>2012-04-26T08:50:43.8638484+08:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\demographics_0.xml</Key>
+        <Value>2012-04-26T08:50:45.9539679+08:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>demographics.fbx</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\demographics_0.xml</Output>
+      <Time>2012-04-26T08:50:43.8638484+08:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>HiDef</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\Pucong Han\Desktop\DataVirtulization\DataVirtulization\DataVirtulizationContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Pucong Han\Desktop\DataVirtulization\DataVirtulization\DataVirtulization\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Pucong Han\Desktop\DataVirtulization\DataVirtulization\DataVirtulizationContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Pucong Han\Desktop\DataVirtulization\DataVirtulization\DataVirtulization\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2010-08-23T12:41:18+08:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2010-08-23T12:41:18+08:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2010-08-23T12:41:18+08:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2010-08-23T12:41:18+08:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2010-08-23T12:41:18+08:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2010-08-23T12:41:18+08:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2012-02-03T06:52:39.0965907+08:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>

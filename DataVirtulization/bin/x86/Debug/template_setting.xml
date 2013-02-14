@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GoblinXNASettings>
+  <!--Specifies the file path in which to write out the log file-->
+  <!--If not specified, the default path is where the executable is with file name 'log.txt'-->
+  <var name="LogFileName" value="GoblinXNALog.txt" />
+  <!--Specifies where the texture resources are stored under 'Content' directory-->
+  <!--You don't need to specify this if directly stored under 'Content'-->
+  <var name="TextureDirectory" value="Textures" />
+  <!--Specifies where the shader (.fx) resources are stored under 'Content' directory-->
+  <!--You don't need to specify this if directly stored under 'Content'-->
+  <var name="ShaderDirectory" value="Shaders" />
+  <!--Specifies where the 3D model resources are stored under 'Content' directory-->
+  <!--You don't need to specify this if directly stored under 'Content'-->
+  <var name="ModelDirectory" value="Models" />
+  <!--Specifies where the font resources are stored under 'Content' directory-->
+  <!--You don't need to specify this if directly stored under 'Content'-->
+  <var name="FontDirectory" value="Fonts" />
+  <!--Specifies where the audio resources are stored under 'Content' directory-->
+  <!--You don't need to specify this if directly stored under 'Content'-->
+  <var name="AudioDirectory" value="Audio" />
+</GoblinXNASettings>

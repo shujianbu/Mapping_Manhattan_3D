@@ -1,0 +1,36 @@
+c:\users\pucong han\documents\visual studio 2010\Projects\DataVirtulization\DataVirtulization\DataVirtulization\bin\x86\Debug\DataVirtulization.exe
+c:\users\pucong han\documents\visual studio 2010\Projects\DataVirtulization\DataVirtulization\DataVirtulization\bin\x86\Debug\DataVirtulization.pdb
+c:\users\pucong han\documents\visual studio 2010\Projects\DataVirtulization\DataVirtulization\DataVirtulization\bin\x86\Debug\DirectX.Capture.dll
+c:\users\pucong han\documents\visual studio 2010\Projects\DataVirtulization\DataVirtulization\DataVirtulization\bin\x86\Debug\DShowNET.dll
+c:\users\pucong han\documents\visual studio 2010\Projects\DataVirtulization\DataVirtulization\DataVirtulization\bin\x86\Debug\GoblinXNA.dll
+c:\users\pucong han\documents\visual studio 2010\Projects\DataVirtulization\DataVirtulization\DataVirtulization\bin\x86\Debug\Lidgren.Network.dll
+c:\users\pucong han\documents\visual studio 2010\Projects\DataVirtulization\DataVirtulization\DataVirtulization\bin\x86\Debug\NewtonWrapper.dll
+c:\users\pucong han\documents\visual studio 2010\Projects\DataVirtulization\DataVirtulization\DataVirtulization\bin\x86\Debug\Nuclex.Fonts.dll
+c:\users\pucong han\documents\visual studio 2010\Projects\DataVirtulization\DataVirtulization\DataVirtulization\bin\x86\Debug\GoblinXNA.pdb
+c:\users\pucong han\documents\visual studio 2010\Projects\DataVirtulization\DataVirtulization\DataVirtulization\bin\x86\Debug\GoblinXNA.xml
+c:\users\pucong han\documents\visual studio 2010\Projects\DataVirtulization\DataVirtulization\DataVirtulization\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\pucong han\documents\visual studio 2010\Projects\DataVirtulization\DataVirtulization\DataVirtulization\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+c:\users\pucong han\documents\visual studio 2010\Projects\DataVirtulization\DataVirtulization\DataVirtulization\obj\x86\Debug\DataVirtulization.exe
+c:\users\pucong han\documents\visual studio 2010\Projects\DataVirtulization\DataVirtulization\DataVirtulization\obj\x86\Debug\DataVirtulization.pdb
+c:\users\pucong han\documents\visual studio 2010\Projects\DataVirtulization\DataVirtulization\DataVirtulization\bin\x86\Debug\Content\Arial.xnb
+C:\Users\Pucong Han\Documents\Visual Studio 2010\Projects\DataVirtulization\DataVirtulization\DataVirtulization\bin\x86\Debug\Content\manhattan.xnb
+C:\Users\Pucong Han\Documents\Visual Studio 2010\Projects\DataVirtulization\DataVirtulization\DataVirtulization\bin\x86\Debug\Content\ArialLarge.xnb
+C:\Users\Pucong Han\Desktop\DataVirtulization\DataVirtulization\DataVirtulization\bin\x86\Debug\Content\Arial.xnb
+C:\Users\Pucong Han\Desktop\DataVirtulization\DataVirtulization\DataVirtulization\bin\x86\Debug\Content\ArialLarge.xnb
+C:\Users\Pucong Han\Desktop\DataVirtulization\DataVirtulization\DataVirtulization\bin\x86\Debug\Content\manhattan.xnb
+C:\Users\Pucong Han\Desktop\DataVirtulization\DataVirtulization\DataVirtulization\bin\x86\Debug\DataVirtulization.exe
+C:\Users\Pucong Han\Desktop\DataVirtulization\DataVirtulization\DataVirtulization\bin\x86\Debug\DataVirtulization.pdb
+C:\Users\Pucong Han\Desktop\DataVirtulization\DataVirtulization\DataVirtulization\bin\x86\Debug\Lidgren.Network.dll
+C:\Users\Pucong Han\Desktop\DataVirtulization\DataVirtulization\DataVirtulization\bin\x86\Debug\NewtonWrapper.dll
+C:\Users\Pucong Han\Desktop\DataVirtulization\DataVirtulization\DataVirtulization\bin\x86\Debug\Nuclex.Fonts.dll
+C:\Users\Pucong Han\Desktop\DataVirtulization\DataVirtulization\DataVirtulization\bin\x86\Debug\GoblinXNA.pdb
+C:\Users\Pucong Han\Desktop\DataVirtulization\DataVirtulization\DataVirtulization\bin\x86\Debug\GoblinXNA.xml
+C:\Users\Pucong Han\Desktop\DataVirtulization\DataVirtulization\DataVirtulization\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Pucong Han\Desktop\DataVirtulization\DataVirtulization\DataVirtulization\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Pucong Han\Desktop\DataVirtulization\DataVirtulization\DataVirtulization\obj\x86\Debug\DataVirtulization.exe
+C:\Users\Pucong Han\Desktop\DataVirtulization\DataVirtulization\DataVirtulization\obj\x86\Debug\DataVirtulization.pdb
+C:\Users\Pucong Han\Desktop\DataVirtulization\DataVirtulization\DataVirtulization\bin\x86\Debug\Content\education.xnb
+C:\Users\Pucong Han\Desktop\DataVirtulization\DataVirtulization\DataVirtulization\bin\x86\Debug\Content\employment.xnb
+C:\Users\Pucong Han\Desktop\DataVirtulization\DataVirtulization\DataVirtulization\bin\x86\Debug\Content\housing.xnb
+C:\Users\Pucong Han\Desktop\DataVirtulization\DataVirtulization\DataVirtulization\bin\x86\Debug\Content\model10001.xnb
+C:\Users\Pucong Han\Desktop\DataVirtulization\DataVirtulization\DataVirtulization\bin\x86\Debug\Content\demographics.xnb

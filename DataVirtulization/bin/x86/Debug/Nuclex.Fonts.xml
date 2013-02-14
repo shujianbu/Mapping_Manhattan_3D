@@ -1,0 +1,1320 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Nuclex.Fonts</name>
+    </assembly>
+    <members>
+        <member name="T:Nuclex.Fonts.Text">
+            <summary>Base class for vector font texts</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.Text.vertices">
+            <summary>Vertices containing the text's outline or face coordinates</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.Text.indices">
+            <summary>
+              Indices describing which vertices to connect by lines or triangles
+            </summary>
+        </member>
+        <member name="F:Nuclex.Fonts.Text.primitiveType">
+            <summary>Type of primitives to draw</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.Text.width">
+            <summary>Total width of the string in world units</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.Text.height">
+            <summary>Total height of the string in world units</summary>
+        </member>
+        <member name="P:Nuclex.Fonts.Text.Vertices">
+            <summary>Vertices containing the text's outline or face coordinates</summary>
+        </member>
+        <member name="P:Nuclex.Fonts.Text.Indices">
+            <summary>
+              Indices describing which vertices to connect by lines or triangles
+            </summary>
+        </member>
+        <member name="P:Nuclex.Fonts.Text.PrimitiveType">
+            <summary>Type of primitives to draw</summary>
+        </member>
+        <member name="P:Nuclex.Fonts.Text.Width">
+            <summary>Total width of the string in world units</summary>
+        </member>
+        <member name="P:Nuclex.Fonts.Text.Height">
+            <summary>Total height of the string in world units</summary>
+        </member>
+        <member name="T:Nuclex.Fonts.TextDrawContext">
+            <summary>Drawing context for drawing text with vector fonts</summary>
+        </member>
+        <member name="T:Nuclex.Fonts.Graphics.Batching.DrawContext">
+            <summary>
+              Controls the graphics device settings during the rendering process
+            </summary>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.DrawContext.Apply(System.Int32)">
+            <summary>Prepares the graphics device for drawing</summary>
+            <param name="pass">Index of the pass to begin rendering</param>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.DrawContext.Equals(Nuclex.Fonts.Graphics.Batching.DrawContext)">
+            <summary>Tests whether another draw context is identical to this one</summary>
+            <param name="otherContext">Other context to check for equality</param>
+            <returns>True if the other context is identical to this one</returns>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.DrawContext.Equals(System.Object)">
+            <summary>
+              Tests whether another object is a draw context with identical settings
+            </summary>
+            <param name="other">Object to check for equality</param>
+            <returns>
+              True if the other context is a draw context identical to this one
+            </returns>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.DrawContext.GetHashCode">
+            <summary>
+              Returns a hashcode that is not guaranteed to be unique but will be equal for
+              all instances of the class that are in an identical state
+            </summary>
+            <returns>The hashcode of the object</returns>
+        </member>
+        <member name="P:Nuclex.Fonts.Graphics.Batching.DrawContext.Passes">
+            <summary>Number of passes this draw context requires for rendering</summary>
+        </member>
+        <member name="M:Nuclex.Fonts.TextDrawContext.#ctor(Microsoft.Xna.Framework.Graphics.Effect,Microsoft.Xna.Framework.Matrix,Microsoft.Xna.Framework.Color)">
+            <summary>Initializes a new text draw context</summary>
+            <param name="effect">Effect that will be used to render the text</param>
+            <param name="transform">Transformation matrix for the text</param>
+            <param name="textColor">Drawing color of the text</param>
+        </member>
+        <member name="M:Nuclex.Fonts.TextDrawContext.Apply(System.Int32)">
+            <summary>Prepares the graphics device for drawing</summary>
+            <param name="pass">Index of the pass to begin rendering</param>
+        </member>
+        <member name="M:Nuclex.Fonts.TextDrawContext.Equals(Nuclex.Fonts.Graphics.Batching.DrawContext)">
+            <summary>Tests whether another draw context is identical to this one</summary>
+            <param name="otherContext">Other context to check for equality</param>
+            <returns>True if the other context is identical to this one</returns>
+        </member>
+        <member name="F:Nuclex.Fonts.TextDrawContext.effect">
+            <summary>The draw context's effect used for rendering</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.TextDrawContext.transform">
+            <summary>Transformation matrix controlling the text's placement</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.TextDrawContext.textColor">
+            <summary>Drawing color of the text</summary>
+        </member>
+        <member name="P:Nuclex.Fonts.TextDrawContext.Passes">
+            <summary>Number of passes this draw context requires for rendering</summary>
+        </member>
+        <member name="T:Nuclex.Fonts.FilledText">
+            <summary>Stores the vertices for a string as filled 3D text</summary>
+        </member>
+        <member name="M:Nuclex.Fonts.FilledText.#ctor(Nuclex.Fonts.VectorFont,System.String)">
+            <summary>Initializes a new filled string mesh</summary>
+            <param name="font">Font from which the vertices will be taken</param>
+            <param name="text">String of which to build a mesh</param>
+        </member>
+        <member name="M:Nuclex.Fonts.FilledText.buildStringMesh(Nuclex.Fonts.VectorFont,System.String)">
+            <summary>Builds the combined mesh for the letters in this string</summary>
+            <param name="font">Vector font to take the vertex data from</param>
+            <param name="text">String of which a mesh is to be built</param>
+        </member>
+        <member name="M:Nuclex.Fonts.FilledText.resizeVertexAndIndexArrays(Nuclex.Fonts.VectorFont,System.String)">
+            <summary>Reserves the required space in the vertex and index arrays</summary>
+            <param name="font">Font the vertices for the letters will be taken from</param>
+            <param name="text">String of which a mesh will be built</param>
+        </member>
+        <member name="T:Nuclex.Fonts.Content.VectorFontReader">
+            <summary>XNA framework content reader for VectorFonts</summary>
+        </member>
+        <member name="M:Nuclex.Fonts.Content.VectorFontReader.Read(Microsoft.Xna.Framework.Content.ContentReader,Nuclex.Fonts.VectorFont)">
+            <summary>Load a vector font from a stored XNA asset</summary>
+            <param name="input">Reader from which the asset can be read</param>
+            <param name="existingInstance">Optional existing instance we are reloading</param>
+            <returns>The loaded VectorFont instance</returns>
+        </member>
+        <member name="T:Nuclex.Fonts.TextBatch">
+            <summary>Batches text drawing commands</summary>
+        </member>
+        <member name="M:Nuclex.Fonts.TextBatch.#ctor(Microsoft.Xna.Framework.Graphics.GraphicsDevice)">
+            <summary>Initializes a new text batch for rendering</summary>
+            <param name="graphicsDevice">Graphics device to render to</param>
+        </member>
+        <member name="M:Nuclex.Fonts.TextBatch.Dispose">
+            <summary>Immediately releases all resources owned by the instance</summary>
+        </member>
+        <member name="M:Nuclex.Fonts.TextBatch.DrawText(Nuclex.Fonts.Text,Microsoft.Xna.Framework.Color)">
+            <summary>Draws a line of text to the screen</summary>
+            <param name="text">Pregenerated text mesh to draw to the screen</param>
+            <param name="color">Color and opacity with which to draw the text</param>
+        </member>
+        <member name="M:Nuclex.Fonts.TextBatch.DrawText(Nuclex.Fonts.Text,Microsoft.Xna.Framework.Matrix,Microsoft.Xna.Framework.Color)">
+            <summary>Draws a line of text to the screen</summary>
+            <param name="text">Pregenerated text mesh to draw to the screen</param>
+            <param name="color">Color and opacity with which to draw the text</param>
+            <param name="transform">Transformation matrix to apply to the text</param>
+        </member>
+        <member name="M:Nuclex.Fonts.TextBatch.DrawText(Nuclex.Fonts.Text,Microsoft.Xna.Framework.Graphics.Effect)">
+            <summary>Draws a line of text to the screen</summary>
+            <param name="text">Pregenerated text mesh to draw to the screen</param>
+            <param name="effect">Custom effect with which to draw the text</param>
+        </member>
+        <member name="M:Nuclex.Fonts.TextBatch.Begin">
+            <summary>Begins a new text rendering batch</summary>
+            <remarks>
+              Call this before drawing text with the DrawText() method. For optimal
+              performance, try to put all your text drawing commands inside as few
+              Begin()..End() pairs as you can manage.
+            </remarks>
+        </member>
+        <member name="M:Nuclex.Fonts.TextBatch.End">
+            <summary>Ends the current text rendering batch</summary>
+            <remarks>
+              This method needs to be called each time you call the Begin() method
+              after all text drawing commands have taken place.
+            </remarks>
+        </member>
+        <member name="F:Nuclex.Fonts.TextBatch.dummyService">
+            <summary>Dummy graphics device service used for the content manager</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.TextBatch.contentManager">
+            <summary>Content manager used to load the text batch's effect file</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.TextBatch.primitiveBatch">
+            <summary>Primitive batch used to batch text vertices together</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.TextBatch.solidColorEffect">
+            <summary>Effect used for rendering text in solid color</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.TextBatch.viewProjection">
+            <summary>Current view * projection matrix to apply to the text</summary>
+        </member>
+        <member name="P:Nuclex.Fonts.TextBatch.ViewProjection">
+            <summary>Current concatenated view * projection matrix of the scene</summary>
+        </member>
+        <member name="T:Nuclex.Fonts.OutlinedText">
+            <summary>Stores the vertices for an outlined string</summary>
+        </member>
+        <member name="M:Nuclex.Fonts.OutlinedText.#ctor(Nuclex.Fonts.VectorFont,System.String)">
+            <summary>Initializes a new outlined string</summary>
+            <param name="font">Font from which the vertices will be taken</param>
+            <param name="text">String of which to build a mesh</param>
+        </member>
+        <member name="M:Nuclex.Fonts.OutlinedText.buildStringOutline(Nuclex.Fonts.VectorFont,System.String)">
+            <summary>Builds the combined outline for the letters in this string</summary>
+            <param name="font">Vector font to take the vertex data from</param>
+            <param name="text">String of which a mesh is to be built</param>
+        </member>
+        <member name="M:Nuclex.Fonts.OutlinedText.resizeVertexAndIndexArrays(Nuclex.Fonts.VectorFont,System.String)">
+            <summary>Reserves the required space in the vertex and index arrays</summary>
+            <param name="font">Font the vertices for the letters will be taken from</param>
+            <param name="text">String of which a mesh will be built</param>
+        </member>
+        <member name="T:Nuclex.Fonts.Content.VectorFontCharacterReader">
+            <summary>XNA framework content reader for VectorFont characters</summary>
+        </member>
+        <member name="M:Nuclex.Fonts.Content.VectorFontCharacterReader.Read(Microsoft.Xna.Framework.Content.ContentReader,Nuclex.Fonts.VectorFontCharacter)">
+            <summary>Load a vector font character from a stored XNA asset</summary>
+            <param name="input">Reader from which the asset can be read</param>
+            <param name="existingInstance">Optional existing instance we are reloading</param>
+            <returns>The loaded VectorFont character</returns>
+        </member>
+        <member name="T:Nuclex.Fonts.Resources.TextBatchResources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Nuclex.Fonts.Resources.TextBatchResources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Nuclex.Fonts.Resources.TextBatchResources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:Nuclex.Fonts.ExtrudedText">
+            <summary>Stores the vertices for an extruded string mesh</summary>
+            <remarks>
+              The extruded mesh will always be extruded by 1.0 units centered about the
+              middle of the extrusion. This allows you to scale the text's extrusion
+              level at rendering time for free using the transformation matrix of the
+              rendered text.
+            </remarks>
+        </member>
+        <member name="M:Nuclex.Fonts.ExtrudedText.#ctor(Nuclex.Fonts.VectorFont,System.String)">
+            <summary>Initializes a new extruded string mesh</summary>
+            <param name="font">Font from which the vertices will be taken</param>
+            <param name="text">String of which to build a mesh</param>
+        </member>
+        <member name="M:Nuclex.Fonts.ExtrudedText.buildStringMesh(Nuclex.Fonts.VectorFont,System.String)">
+            <summary>Builds the combined mesh for the letters in this string</summary>
+            <param name="font">Vector font to take the vertex data from</param>
+            <param name="text">String of which a mesh is to be built</param>
+        </member>
+        <member name="M:Nuclex.Fonts.ExtrudedText.resizeVertexAndIndexArrays(Nuclex.Fonts.VectorFont,System.String)">
+            <summary>Reserves the required space in the vertex and index arrays</summary>
+            <param name="font">Font the vertices for the letters will be taken from</param>
+            <param name="text">String of which a mesh will be built</param>
+        </member>
+        <member name="T:Nuclex.Fonts.VectorFontCharacter">
+            <summary>Stores the data of a character in a vector font</summary>
+            <remarks>
+              <para>
+                Each character in a vector font has an array of vertices that store the
+                outline points for the font and in some cases contains additional
+                supporting vertices required to draw filled text with triangles.
+              </para>
+              <para>
+                You can either access this data any make use of it for your own purposes,
+                or use one of the vector font's provided methods for constructing an
+                outline font, a flat font or an extruded font.
+              </para>
+            </remarks>
+        </member>
+        <member name="M:Nuclex.Fonts.VectorFontCharacter.#ctor(Microsoft.Xna.Framework.Vector2,System.Collections.Generic.List{Microsoft.Xna.Framework.Vector2},System.Collections.Generic.List{Nuclex.Fonts.VectorFontCharacter.Outline},System.Collections.Generic.List{Nuclex.Fonts.VectorFontCharacter.Face})">
+            <summary>Initializes new vector font character</summary>
+            <param name="advancement">
+              By what to advance the pen after the character was drawn
+            </param>
+            <param name="vertices">Vertices used by this character</param>
+            <param name="outlines">Vertex indices for drawing the character's outline</param>
+            <param name="faces">Vertex indices for filling the character</param>
+        </member>
+        <member name="F:Nuclex.Fonts.VectorFontCharacter.advancement">
+            <summary>How far to advance the cursor after this character is rendered</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.VectorFontCharacter.vertices">
+            <summary>Vertices used by this character</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.VectorFontCharacter.outlines">
+            <summary>Vertex index ranges to use for drawing the character's outlines</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.VectorFontCharacter.faces">
+            <summary>Vertex indices to use for filling the character with triangles</summary>
+        </member>
+        <member name="P:Nuclex.Fonts.VectorFontCharacter.Advancement">
+            <summary>By how much to advance the cursor after drawing this character</summary>
+        </member>
+        <member name="P:Nuclex.Fonts.VectorFontCharacter.Vertices">
+            <summary>Vertices for this character</summary>
+            <remarks>
+              This contains the vertices required to draw the outline of the character
+              as well as supporting vertices required to draw the character's face as
+              a series of triangles. If you're only interested in a character's outlines,
+              you can ignore any vertices with an index above the EndVertex of
+              the lastmost outline contained in the Outlines list.
+            </remarks>
+        </member>
+        <member name="P:Nuclex.Fonts.VectorFontCharacter.Outlines">
+            <summary>
+              Specifies which vertices have to be connected to draw the outlines
+              of the character.
+            </summary>
+            <remarks>
+              <para>
+                A character can have more than one outline. For example, the equals sign ('=')
+                has two unconnected shapes that require two outlines to be drawn. In this
+                case, you'd find two outlines, the first one specifying the starting and ending
+                vertex for the first stroke and the second one specifying the starting and
+                ending vertex for the second stroke.
+              </para>
+              <para>
+                The vertex range specified by each outline should be handled as a single
+                line strip (draw a line from the first to the second vertex, then from the
+                second to the third, and so on). The final vertex needs to be connected
+                to the first vertex again to close the outline.
+              </para>
+            </remarks>
+        </member>
+        <member name="P:Nuclex.Fonts.VectorFontCharacter.Faces">
+            <summary>
+              Specifies between which vertices triangles have to be drawn to draw a
+              polygon-filled character.
+            </summary>
+        </member>
+        <member name="T:Nuclex.Fonts.VectorFontCharacter.Outline">
+            <summary>Stores the starting index and the vertex count of a character outline</summary>
+        </member>
+        <member name="M:Nuclex.Fonts.VectorFontCharacter.Outline.#ctor(System.Int32,System.Int32)">
+            <summary>Initializes a new character outline</summary>
+            <param name="startVertexIndex">Index of the vertex with which the outline starts</param>
+            <param name="vertexCount">Number of vertices in this outline</param>
+        </member>
+        <member name="F:Nuclex.Fonts.VectorFontCharacter.Outline.StartVertexIndex">
+            <summary>Index of the vertex with which the outline begins</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.VectorFontCharacter.Outline.VertexCount">
+            <summary>Total number of vertices the outline consists of</summary>
+        </member>
+        <member name="T:Nuclex.Fonts.VectorFontCharacter.Face">
+            <summary>Stores three vertex indices forming a triangle</summary>
+        </member>
+        <member name="M:Nuclex.Fonts.VectorFontCharacter.Face.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>Initializes a new character face triangle</summary>
+            <param name="firstVertexIndex">Index of the triangle's first vertex</param>
+            <param name="secondVertexIndex">Index of the triangle's second vertex</param>
+            <param name="thirdVertexIndex">Index of the triangle's third vertex</param>
+        </member>
+        <member name="F:Nuclex.Fonts.VectorFontCharacter.Face.FirstVertexIndex">
+            <summary>Index of the first vertex of the triangle</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.VectorFontCharacter.Face.SecondVertexIndex">
+            <summary>Index of the second vertex of the triangle</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.VectorFontCharacter.Face.ThirdVertexIndex">
+            <summary>Index of the third vertex of the triangle</summary>
+        </member>
+        <member name="T:Nuclex.Fonts.VectorFont">
+            <summary>Vector-based font for creating three-dimensional text</summary>
+            <remarks>
+              <para>
+                Whereas bitmap based fonts copy pre-rendered image of the characters onto
+                the screen, vector based fonts store the vertices that make up a fonts 'hull'
+                and render the text with actual polygons at runtime.
+              </para>
+              <para>
+                For normal usage, after loading a VectorFont instance through the
+                Content Manager, use one of the three mesh generation methods:
+                <list type="bullet">
+                  <item>
+                    <term>Outline()</term>
+                    <description>
+                      This method outlines the given string and returns a text mesh that
+                      contains the side faces of the entire string in a single vertex list.
+                    </description>
+                  </item>
+                  <item>
+                    <term>Fill()</term>
+                    <description>
+                      Probably the most-used variant, this will build a flat mesh from the
+                      string you provide. The mesh only contains front-facing polygons and
+                      is ideal for normal text display, with the advantage that text won't
+                      become distorted or blurry when it is zoomed / rotated.
+                    </description>
+                  </item>
+                  <item>
+                    <term>Extrude()</term>
+                    <description>
+                      This method builds a complete sealed 3D mesh from the string you
+                      specify. The length of extrusion is always 1.0 units, centered
+                      about the middle of that range, giving you the ability to scale the
+                      extrusion level at will using the text's transformation matrix.
+                    </description>
+                  </item>
+                </list>
+              </para>
+              <para>
+                The vector font class also gives you full access to the underlying data of
+                a font, enabling you to use it for other purposes such as collision detection
+                or volume-based particle emitters that will make your credits or intro text
+                look more dynamic. This data is contained in the character instances you can
+                access through this class. To find the character index for a specific unicode
+                letter, use the CharacterMap which enlists any letter that the font can provide.
+              </para>
+            </remarks>
+        </member>
+        <member name="M:Nuclex.Fonts.VectorFont.#ctor(System.Single,System.Collections.Generic.List{Nuclex.Fonts.VectorFontCharacter},System.Collections.Generic.Dictionary{System.Char,System.Int32},System.Collections.Generic.Dictionary{Nuclex.Fonts.VectorFont.KerningPair,Microsoft.Xna.Framework.Vector2})">
+            <summary>Constructs a new vector font</summary>
+            <param name="lineHeight">
+              Height of a single line of text in this font
+            </param>
+            <param name="characters">List of Characters contained in the font</param>
+            <param name="characterMap">
+              Map used to associate unicode characters with character indices
+            </param>
+            <param name="kerningTable">
+              Kerning data for adjusting the space between specific characters
+            </param>
+        </member>
+        <member name="M:Nuclex.Fonts.VectorFont.Outline(System.String)">
+            <summary>Constructs the outline of the specified string</summary>
+            <param name="text">String to construct an outline of</param>
+            <returns>The outline of the specified string</returns>
+        </member>
+        <member name="M:Nuclex.Fonts.VectorFont.Fill(System.String)">
+            <summary>Constructs a mesh of the strings face plane</summary>
+            <param name="text">Text to construct a flat polygon mesh of</param>
+            <returns>The filled string mesh</returns>
+        </member>
+        <member name="M:Nuclex.Fonts.VectorFont.Extrude(System.String)">
+            <summary>Constructs an extruded polygon mesh of the string</summary>
+            <param name="text">String from which to construct a polygon mesh</param>
+            <returns>The extruded string mesh</returns>
+        </member>
+        <member name="F:Nuclex.Fonts.VectorFont.lineHeight">
+            <summary>Height of a single line of text in this font</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.VectorFont.characters">
+            <summary>Characters contained in the font</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.VectorFont.characterMap">
+            <summary>Look-up map for indices by unicode character</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.VectorFont.kerningTable">
+            <summary>
+              Kerning table for adjusting the positions of specific character combinations
+            </summary>
+        </member>
+        <member name="P:Nuclex.Fonts.VectorFont.LineHeight">
+            <summary>Height of a single line of text in this font</summary>
+        </member>
+        <member name="P:Nuclex.Fonts.VectorFont.Characters">
+            <summary>List of the characters contained in this font</summary>
+        </member>
+        <member name="P:Nuclex.Fonts.VectorFont.CharacterMap">
+            <summary>Maps unicode character to indices into the character list</summary>
+        </member>
+        <member name="P:Nuclex.Fonts.VectorFont.KerningTable">
+            <summary>
+              Kerning table for adjusting the positions of specific character combinations
+            </summary>
+            <remarks>
+              Certain character combination, such as the two consecutive characters 'AV'
+              have diagonal shapes that would cause the characters to visually appear
+              is if they were further apart from each other. Kerning adjusts the distances
+              between such characters to keep the perceived character distance at the
+              same level for all character combinations.
+            </remarks>
+        </member>
+        <member name="T:Nuclex.Fonts.VectorFont.KerningPair">
+            <summary>Pair of characters for kerning informations</summary>
+        </member>
+        <member name="M:Nuclex.Fonts.VectorFont.KerningPair.#ctor(System.Char,System.Char)">
+            <summary>Initializes a new kerning pair</summary>
+            <param name="left">Left character of the kerning pair</param>
+            <param name="right">Right character of the kerning pair</param>
+        </member>
+        <member name="F:Nuclex.Fonts.VectorFont.KerningPair.Left">
+            <summary>The left character in the kerning pair</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.VectorFont.KerningPair.Right">
+            <summary>The right character in the kerning pair</summary>
+        </member>
+        <member name="M:Nuclex.Fonts.VectorFont.KerningPair.GetHashCode">
+            <summary>Returns a hash code for the kerning pair</summary>
+            <returns>A hash code for the kerning pair</returns>
+        </member>
+        <member name="M:Nuclex.Fonts.VectorFont.KerningPair.Equals(System.Object)">
+            <summary>Compares this object to another object</summary>
+            <param name="other">Object to compare to</param>
+            <returns>True if both objects are identical</returns>
+        </member>
+        <member name="T:Nuclex.Fonts.Resources.UnitTestResources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Nuclex.Fonts.Resources.UnitTestResources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Nuclex.Fonts.Resources.UnitTestResources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:Nuclex.Fonts.Graphics.GraphicsDeviceServiceHelper">
+            <summary>Provides supporting functions for the graphics device service</summary>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.GraphicsDeviceServiceHelper.MakePrivateServiceProvider(Microsoft.Xna.Framework.Graphics.IGraphicsDeviceService)">
+            <summary>
+              Creates a service provider containing only the graphics device service
+            </summary>
+            <param name="graphicsDeviceService">
+              Graphics device service that will be provided by the service provider
+            </param>
+            <returns>
+              A new service provider that provides the graphics device service
+            </returns>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.GraphicsDeviceServiceHelper.MakeDummyGraphicsDeviceService(Microsoft.Xna.Framework.Graphics.GraphicsDevice)">
+            <summary>
+              Creates a dummy graphics device service for the provided graphics device
+            </summary>
+            <param name="graphicsDevice">
+              Graphics device the dummy service is created around
+            </param>
+            <returns>A new dummy service for the provided graphics device</returns>
+            <remarks>
+              The dummy graphics device service is in all terms equal to the real thing,
+              except that it will trigger the service's events *after* the graphics device
+              might have already notified other subscribers.
+            </remarks>
+        </member>
+        <member name="T:Nuclex.Fonts.Graphics.GraphicsDeviceServiceHelper.DummyGraphicsDeviceService">
+            <summary>Dummy graphics device service using an existing graphics device</summary>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.GraphicsDeviceServiceHelper.DummyGraphicsDeviceService.#ctor(Microsoft.Xna.Framework.Graphics.GraphicsDevice)">
+            <summary>Initializes a new dummy graphics device service</summary>
+            <param name="graphicsDevice">Graphics device the service will use</param>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.GraphicsDeviceServiceHelper.DummyGraphicsDeviceService.Dispose">
+            <summary>Immediately releases all resouces owned by the instance</summary>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.GraphicsDeviceServiceHelper.DummyGraphicsDeviceService.graphicsDeviceResetting(System.Object,System.EventArgs)">
+            <summary>Called when the graphics device is about to reset</summary>
+            <param name="sender">Graphics device that is started a reset</param>
+            <param name="arguments">Not used</param>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.GraphicsDeviceServiceHelper.DummyGraphicsDeviceService.graphicsDeviceReset(System.Object,System.EventArgs)">
+            <summary>Called when the graphics device has completed a reset</summary>
+            <param name="sender">Graphics device that has completed its reset</param>
+            <param name="arguments">Not used</param>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.GraphicsDeviceServiceHelper.DummyGraphicsDeviceService.graphicsDeviceDisposing(System.Object,System.EventArgs)">
+            <summary>Called when the graphics device is being disposed</summary>
+            <param name="sender">Graphics device that is being disposed</param>
+            <param name="arguments">Not used</param>
+        </member>
+        <member name="F:Nuclex.Fonts.Graphics.GraphicsDeviceServiceHelper.DummyGraphicsDeviceService.graphicsDevice">
+            <summary>Graphics device the dummy service is being created for</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.Graphics.GraphicsDeviceServiceHelper.DummyGraphicsDeviceService.graphicsDeviceResettingDelegate">
+            <summary>Delegate for the graphicsDeviceResetting() method</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.Graphics.GraphicsDeviceServiceHelper.DummyGraphicsDeviceService.graphicsDeviceResetDelegate">
+            <summary>Delegate for the graphicsDeviceReset() method</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.Graphics.GraphicsDeviceServiceHelper.DummyGraphicsDeviceService.graphicsDeviceDisposingDelegate">
+            <summary>Delegate for the graphicsDeviceDisposing() method</summary>
+        </member>
+        <member name="E:Nuclex.Fonts.Graphics.GraphicsDeviceServiceHelper.DummyGraphicsDeviceService.DeviceCreated">
+            <summary>Triggered when the graphics device has been created</summary>
+        </member>
+        <member name="E:Nuclex.Fonts.Graphics.GraphicsDeviceServiceHelper.DummyGraphicsDeviceService.DeviceDisposing">
+            <summary>Triggered when the graphics device is about to be disposed</summary>
+        </member>
+        <member name="E:Nuclex.Fonts.Graphics.GraphicsDeviceServiceHelper.DummyGraphicsDeviceService.DeviceReset">
+            <summary>Triggered after the graphics device has completed a reset</summary>
+        </member>
+        <member name="E:Nuclex.Fonts.Graphics.GraphicsDeviceServiceHelper.DummyGraphicsDeviceService.DeviceResetting">
+            <summary>Triggered when the graphcis device is about to be reset</summary>
+        </member>
+        <member name="P:Nuclex.Fonts.Graphics.GraphicsDeviceServiceHelper.DummyGraphicsDeviceService.GraphicsDevice">
+            <summary>Graphics device provided by the service</summary>
+        </member>
+        <member name="T:Nuclex.Fonts.Graphics.Batching.PrimitiveBatch`1">
+            <summary>Collects vertices into batches to improve rendering performance</summary>
+            <typeparam name="VertexType">Type of vertices to be batched</typeparam>
+            <remarks>
+              This class is very similar to the SpriteBatch class, but instead of being
+              specialized for sprite rendering, it handles all kinds of primitives.
+              It is ideal for dynamic, CPU-calculated geometry such as particle systems,
+              fluid visualization or marching cube/tetrahedron-based geometry.
+            </remarks>
+        </member>
+        <member name="F:Nuclex.Fonts.Graphics.Batching.PrimitiveBatch`1.BatchSize">
+            <summary>Maximum number of vertices or indices in a single batch</summary>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.PrimitiveBatch`1.#ctor(Microsoft.Xna.Framework.Graphics.GraphicsDevice)">
+            <summary>Initializes a new primitive batcher</summary>
+            <param name="graphicsDevice">
+              Graphics device the primitive batcher will use
+            </param>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.PrimitiveBatch`1.#ctor(Nuclex.Fonts.Graphics.Batching.IBatchDrawer{`0})">
+            <summary>Initializes a new primitive batcher</summary>
+            <param name="batchDrawer">
+              Vertex batch drawer that will be used by the primitive batcher
+            </param>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.PrimitiveBatch`1.Dispose">
+            <summary>
+              Immediately releases all resources owned by the primitive batch
+            </summary>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.PrimitiveBatch`1.Begin(Nuclex.Fonts.Graphics.Batching.QueueingStrategy)">
+            <summary>Begins the drawing process</summary>
+            <param name="queueingStrategy">
+              By what criteria to queue primitives and when to draw them
+            </param>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.PrimitiveBatch`1.End">
+            <summary>Ends the drawing process</summary>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.PrimitiveBatch`1.Draw(`0[],Nuclex.Fonts.Graphics.Batching.DrawContext)">
+            <summary>Draws a series of triangles</summary>
+            <param name="vertices">Triangle vertices</param>
+            <param name="context">Desired graphics device settings for the primitives</param>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.PrimitiveBatch`1.Draw(`0[],Microsoft.Xna.Framework.Graphics.PrimitiveType,Nuclex.Fonts.Graphics.Batching.DrawContext)">
+            <summary>Draws a series of primitives</summary>
+            <param name="vertices">Primitive vertices</param>
+            <param name="type">Type of primitives to draw</param>
+            <param name="context">Desired graphics device settings for the primitives</param>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.PrimitiveBatch`1.Draw(`0[],System.Int32,System.Int32,Microsoft.Xna.Framework.Graphics.PrimitiveType,Nuclex.Fonts.Graphics.Batching.DrawContext)">
+            <summary>Draws a series of primitives</summary>
+            <param name="vertices">Primitive vertices</param>
+            <param name="startVertex">Index of vertex to begin drawing with</param>
+            <param name="vertexCount">Number of vertices to draw</param>
+            <param name="type">Type of primitives to draw</param>
+            <param name="context">Desired graphics device settings for the primitives</param>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.PrimitiveBatch`1.Draw(`0[],System.Int16[],Nuclex.Fonts.Graphics.Batching.DrawContext)">
+            <summary>Draws a series of indexed triangles</summary>
+            <param name="vertices">Triangle vertices</param>
+            <param name="indices">Indices of the vertices to draw</param>
+            <param name="context">Desired graphics device settings for the primitives</param>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.PrimitiveBatch`1.Draw(`0[],System.Int16[],Microsoft.Xna.Framework.Graphics.PrimitiveType,Nuclex.Fonts.Graphics.Batching.DrawContext)">
+            <summary>Draws a series of indexed primitives</summary>
+            <param name="vertices">Primitive vertices</param>
+            <param name="indices">Indices of the vertices to draw</param>
+            <param name="type">Type of primitives to draw</param>
+            <param name="context">Desired graphics device settings for the primitives</param>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.PrimitiveBatch`1.Draw(`0[],System.Int32,System.Int32,System.Int16[],System.Int32,System.Int32,Microsoft.Xna.Framework.Graphics.PrimitiveType,Nuclex.Fonts.Graphics.Batching.DrawContext)">
+            <summary>Draws a series of indexed primitives</summary>
+            <param name="vertices">Primitive vertices</param>
+            <param name="startVertex">
+              Index in the vertex array of the first vertex. This vertex will become
+              the new index 0 for the index buffer.
+            </param>
+            <param name="vertexCount">Number of vertices to draw</param>
+            <param name="indices">Indices of the vertices to draw</param>
+            <param name="startIndex">Index of the vertex index to begin drawing with</param>
+            <param name="indexCount">Number of vertex indices to draw</param>
+            <param name="type">Type of primitives to draw</param>
+            <param name="context">Desired graphics device settings for the primitives</param>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.PrimitiveBatch`1.GetDefaultBatchDrawer(Microsoft.Xna.Framework.Graphics.GraphicsDevice)">
+            <summary>Returns the default batch drawer for the target platform</summary>
+            <param name="graphicsDevice">Graphics device that batch drawer will use</param>
+            <returns>
+              A new instance of the default batch drawer for the target platform
+            </returns>
+        </member>
+        <member name="F:Nuclex.Fonts.Graphics.Batching.PrimitiveBatch`1.batchDrawer">
+            <summary>Sends batches of vertices to the GPU for drawing</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.Graphics.Batching.PrimitiveBatch`1.queueingStrategy">
+            <summary>Controls how primitives are queued (selects queuer)</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.Graphics.Batching.PrimitiveBatch`1.primitiveQueuer">
+            <summary>Queues vertices and initiates rendering when needed</summary>
+        </member>
+        <member name="T:Nuclex.Fonts.Graphics.Batching.QueueingStrategy">
+            <summary>
+              Strategies by which the primitive batcher can consolidate vertices
+            </summary>
+        </member>
+        <member name="F:Nuclex.Fonts.Graphics.Batching.QueueingStrategy.Immediate">
+            <summary>Immediately draws any primitives sent to the batcher.</summary>
+            <remarks>
+              This results in rather poor performance but keeps the drawing order
+              unchanged even when multiple primitve batchers are used to draw at
+              the same time.
+            </remarks>
+        </member>
+        <member name="F:Nuclex.Fonts.Graphics.Batching.QueueingStrategy.Deferred">
+            <summary>
+              The vertex batcher caches any drawing commands until a batch is full
+              or the End() method is called.
+            </summary>
+            <remarks>
+              This will greatly improve rendering performance compared to immediate
+              drawing. However, using multiple primitve batchers at the same time
+              will result in an undefined drawing order (if there are no overlaps or
+              the depth buffer is enabled, this won't matter)
+            </remarks>
+        </member>
+        <member name="F:Nuclex.Fonts.Graphics.Batching.QueueingStrategy.Context">
+            <summary>
+              Caches all drawing commands and sorts the primitives queued for drawing
+              by the context they use.
+            </summary>
+            <remarks>
+              This is the fastest mode for many small objects. However, drawing order
+              will be undefined, requiring either a zero overlap guarantee for any
+              vertices drawn or the depth buffer to be enabled.
+            </remarks>
+        </member>
+        <member name="T:Nuclex.Fonts.Graphics.Batching.BasicEffectDrawContext">
+            <summary>
+              Sets up a BasicEffect instance for primitives drawn by the PrimitiveBatch class
+            </summary>
+        </member>
+        <member name="T:Nuclex.Fonts.Graphics.Batching.EffectDrawContext">
+            <summary>
+              Uses a custom XNA effect for the primitives drawn by the PrimitiveBatch class
+            </summary>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.EffectDrawContext.#ctor(Microsoft.Xna.Framework.Graphics.Effect)">
+            <summary>Initializes a new effect draw context</summary>
+            <param name="effect">
+              Effect that will be used for the primitives rendered with this context
+            </param>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.EffectDrawContext.Apply(System.Int32)">
+            <summary>Prepares the graphics device for drawing</summary>
+            <param name="pass">Index of the pass to begin rendering</param>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.EffectDrawContext.Equals(Nuclex.Fonts.Graphics.Batching.DrawContext)">
+            <summary>Tests whether another draw context is identical to this one</summary>
+            <param name="otherContext">Other context to check for equality</param>
+            <returns>True if the other context is identical to this one</returns>
+            <remarks>
+              Classes deriving from the EffectDrawContext should override this method
+              and do their own comparison - for example, two drawing contexts might
+              use the same effect instance, but apply different effect parameters before
+              rendering - in that case, an additional comparison of the draw context's
+              own settings needs to be performed here.
+            </remarks>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.EffectDrawContext.CompareEffectParameters(Microsoft.Xna.Framework.Graphics.Effect)">
+            <summary>Compares the effect parameters member by member</summary>
+            <param name="otherEffect">
+              Other effect that will be compared against the context's own effect
+            </param>
+            <returns>True of all parameters of the other effect are equal</returns>
+            <remarks>
+              Override this to perform a comparison on the relevant parameters of
+              your custom effect. By default, this will return false, causing only
+              effect drawing contexts with the same effect object to be considered
+              for batching.
+            </remarks>
+        </member>
+        <member name="F:Nuclex.Fonts.Graphics.Batching.EffectDrawContext.effect">
+            <summary>The draw context's effect used for rendering</summary>
+        </member>
+        <member name="P:Nuclex.Fonts.Graphics.Batching.EffectDrawContext.Passes">
+            <summary>Number of passes this draw context requires for rendering</summary>
+        </member>
+        <member name="P:Nuclex.Fonts.Graphics.Batching.EffectDrawContext.Effect">
+            <summary>The basic effect being managed by the draw context</summary>
+            <remarks>
+              Warning: If you change the settings of this effect after you've already
+              queued other primitives to be drawn, those primitives might be affected
+              nontheless if they haven't been rendered yet. The recommended usage is to
+              initialize an effect once for each set of settings you need and then keep
+              using those instances without modifying them.
+            </remarks>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.BasicEffectDrawContext.#ctor(Microsoft.Xna.Framework.Graphics.GraphicsDevice)">
+            <summary>Initializes a new BasicEffect draw context</summary>
+            <param name="graphicsDevice">GraphicsDevice the effect will use</param>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.BasicEffectDrawContext.Dispose">
+            <summary>Immediately releases all resources owned by the primitive batch</summary>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.BasicEffectDrawContext.CompareEffectParameters(Microsoft.Xna.Framework.Graphics.Effect)">
+            <summary>Compares the effect parameters member by member</summary>
+            <param name="otherEffect">
+              Other effect that will be compared against the context's own effect
+            </param>
+            <returns>True of all parameters of the other effect are equal</returns>
+            <remarks>
+              Override this to perform a comparison on the relevant parameters of
+              your custom effect. By default, this will return false, causing only
+              effect drawing contexts with the same effect object to be considered
+              for batching.
+            </remarks>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.BasicEffectDrawContext.areEqual(Microsoft.Xna.Framework.Graphics.DirectionalLight,Microsoft.Xna.Framework.Graphics.DirectionalLight)">
+            <summary>Compares two directional lights against each other</summary>
+            <param name="left">Left directional light that will be compared</param>
+            <param name="right">Reft directional light that will be compared</param>
+            <returns>True if both directional lights have identical properties</returns>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.BasicEffectDrawContext.createEffect(Microsoft.Xna.Framework.Graphics.GraphicsDevice)">
+            <summary>Creates the effect used by the draw context</summary>
+            <param name="graphicsDevice">GraphicsDevice the effect will use</param>
+        </member>
+        <member name="F:Nuclex.Fonts.Graphics.Batching.BasicEffectDrawContext.basicEffect">
+            <summary>The draw context's BasicEffect instance used for rendering</summary>
+        </member>
+        <member name="P:Nuclex.Fonts.Graphics.Batching.BasicEffectDrawContext.BasicEffect">
+            <summary>The basic effect being managed by the draw context</summary>
+            <remarks>
+              Warning: If you change the settings of this effect after you've already
+              queued other primitives to be drawn, those primitives might be affected
+              nontheless if they haven't been rendered yet. The recommended usage is to
+              initialize an effect once for each set of settings you need and then keep
+              using those instances without modifying them.
+            </remarks>
+        </member>
+        <member name="T:Nuclex.Fonts.Graphics.Batching.UserPrimitiveBatchDrawer`1">
+            <summary>Draws batched vertices using DrawUserPrimitive() calls</summary>
+        </member>
+        <member name="T:Nuclex.Fonts.Graphics.Batching.IBatchDrawer`1">
+            <summary>
+              Draws batches of primitives using the most efficient method available
+              on the platform the game is running on
+            </summary>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.IBatchDrawer`1.Select(`0[],System.Int32,System.Int16[],System.Int32)">
+            <summary>Selects the vertices that will be used for drawing</summary>
+            <param name="vertices">Primitive vertices</param>
+            <param name="vertexCount">Number of vertices to draw</param>
+            <param name="indices">Indices of the vertices to draw</param>
+            <param name="indexCount">Number of vertex indices to draw</param>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.IBatchDrawer`1.Select(`0[],System.Int32)">
+            <summary>Selects the vertices that will be used for drawing</summary>
+            <param name="vertices">Primitive vertices</param>
+            <param name="vertexCount">Number of vertices to draw</param>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.IBatchDrawer`1.Draw(System.Int32,System.Int32,System.Int32,System.Int32,Microsoft.Xna.Framework.Graphics.PrimitiveType,Nuclex.Fonts.Graphics.Batching.DrawContext)">
+            <summary>Draws a batch of indexed primitives</summary>
+            <param name="startVertex">
+              Index of the first vertex in the vertex array. This vertex will become
+              the new index 0 for the index buffer.
+            </param>
+            <param name="vertexCount">Number of vertices used in the call</param>
+            <param name="startIndex">
+              Position at which to begin processing the index array
+            </param>
+            <param name="indexCount">Number of indices that will be processed</param>
+            <param name="type">Type of primitives to draw</param>
+            <param name="context">Desired graphics device settings for the primitives</param>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.IBatchDrawer`1.Draw(System.Int32,System.Int32,Microsoft.Xna.Framework.Graphics.PrimitiveType,Nuclex.Fonts.Graphics.Batching.DrawContext)">
+            <summary>Draws a batch of primitives</summary>
+            <param name="startVertex">Index of vertex to begin drawing with</param>
+            <param name="vertexCount">Number of vertices used</param>
+            <param name="type">Type of primitives that will be drawn</param>
+            <param name="context">Desired graphics device settings for the primitives</param>
+        </member>
+        <member name="P:Nuclex.Fonts.Graphics.Batching.IBatchDrawer`1.MaximumBatchSize">
+            <summary>
+              Maximum number of vertices or indices a single batch is allowed to have
+            </summary>
+            <remarks>
+              This value must not change once the batch drawer is passed to a queuer
+              since the queuers will size the vertex arrays according to this number.
+            </remarks>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.UserPrimitiveBatchDrawer`1.#ctor(Microsoft.Xna.Framework.Graphics.GraphicsDevice)">
+            <summary>Initializes a new DrawUserPrimitive()-based batch drawer</summary>
+            <param name="graphicsDevice">
+              Graphics device that will be used for rendering
+            </param>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.UserPrimitiveBatchDrawer`1.Dispose">
+            <summary>Immediately releases all resources owned by the instance</summary>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.UserPrimitiveBatchDrawer`1.Select(`0[],System.Int32,System.Int16[],System.Int32)">
+            <summary>Selects the vertices that will be used for drawing</summary>
+            <param name="vertices">Primitive vertices</param>
+            <param name="vertexCount">Number of vertices to draw</param>
+            <param name="indices">Indices of the vertices to draw</param>
+            <param name="indexCount">Number of vertex indices to draw</param>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.UserPrimitiveBatchDrawer`1.Select(`0[],System.Int32)">
+            <summary>Selects the vertices that will be used for drawing</summary>
+            <param name="vertices">Primitive vertices</param>
+            <param name="vertexCount">Number of vertices to draw</param>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.UserPrimitiveBatchDrawer`1.Draw(System.Int32,System.Int32,System.Int32,System.Int32,Microsoft.Xna.Framework.Graphics.PrimitiveType,Nuclex.Fonts.Graphics.Batching.DrawContext)">
+            <summary>Draws a batch of indexed primitives</summary>
+            <param name="startVertex">
+              Index of the first vertex in the vertex array. This vertex will become
+              the new index 0 for the index buffer.
+            </param>
+            <param name="vertexCount">Number of vertices used in the call</param>
+            <param name="startIndex">
+              Position at which to begin processing the index array
+            </param>
+            <param name="indexCount">Number of indices that will be processed</param>
+            <param name="type">Type of primitives to draw</param>
+            <param name="context">Desired graphics device settings for the primitives</param>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.UserPrimitiveBatchDrawer`1.Draw(System.Int32,System.Int32,Microsoft.Xna.Framework.Graphics.PrimitiveType,Nuclex.Fonts.Graphics.Batching.DrawContext)">
+            <summary>Draws a batch of primitives</summary>
+            <param name="startVertex">Index of vertex to begin drawing with</param>
+            <param name="vertexCount">Number of vertices used</param>
+            <param name="type">Type of primitives that will be drawn</param>
+            <param name="context">Desired graphics device settings for the primitives</param>
+        </member>
+        <member name="F:Nuclex.Fonts.Graphics.Batching.UserPrimitiveBatchDrawer`1.graphicsDevice">
+            <summary>Graphics device being used for rendering</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.Graphics.Batching.UserPrimitiveBatchDrawer`1.vertices">
+            <summary>Vertices being used for drawing</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.Graphics.Batching.UserPrimitiveBatchDrawer`1.indices">
+            <summary>Indices being used for drawing</summary>
+        </member>
+        <member name="P:Nuclex.Fonts.Graphics.Batching.UserPrimitiveBatchDrawer`1.MaximumBatchSize">
+            <summary>
+              Maximum number of vertices or indices a single batch is allowed to have
+            </summary>
+        </member>
+        <member name="T:Nuclex.Fonts.Graphics.Batching.DeferredQueuer`1">
+            <summary>Queues vertices until the end of the drawing cycle</summary>
+            <remarks>
+              This queuer respects the order in which drawing commands were given and
+              tries to merge any consecutively issued primitives of the same type into
+              a single DrawPrimitive() call. This is ideal if you have a large number
+              of small objects that are rendered with the same settings (eg. a particle
+              system or letters in a bitmap/vector font system).
+            </remarks>
+        </member>
+        <member name="T:Nuclex.Fonts.Graphics.Batching.Queuer`1">
+            <summary>Controls the queuing of primitives for the primitive batcher</summary>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.Queuer`1.#ctor(Nuclex.Fonts.Graphics.Batching.IBatchDrawer{`0})">
+            <summary>Initializes a new primitive queuer</summary>
+            <param name="batchDrawer">
+              Batch drawer that will be used to render completed vertex batches
+            </param>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.Queuer`1.Dispose">
+            <summary>Immediately releases all resources owned by the queuer</summary>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.Queuer`1.Begin">
+            <summary>Informs the queuer that a new drawing cycle is about to start</summary>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.Queuer`1.End">
+            <summary>Informs the queuer that the current drawing cycle has ended</summary>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.Queuer`1.Queue(`0[],System.Int32,System.Int32,System.Int16[],System.Int32,System.Int32,Microsoft.Xna.Framework.Graphics.PrimitiveType,Nuclex.Fonts.Graphics.Batching.DrawContext)">
+            <summary>Queues a series of indexed primitives</summary>
+            <param name="vertices">Primitive vertices</param>
+            <param name="startVertex">
+              Index in the vertex array of the first vertex. This vertex will become
+              the new index 0 for the index buffer.
+            </param>
+            <param name="vertexCount">Number of vertices to draw</param>
+            <param name="indices">Indices of the vertices to draw</param>
+            <param name="startIndex">Index of the vertex index to begin drawing with</param>
+            <param name="indexCount">Number of vertex indices to draw</param>
+            <param name="type">Type of primitives to draw</param>
+            <param name="context">Desired graphics device settings for the primitives</param>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.Queuer`1.Queue(`0[],System.Int32,System.Int32,Microsoft.Xna.Framework.Graphics.PrimitiveType,Nuclex.Fonts.Graphics.Batching.DrawContext)">
+            <summary>Queues a series of primitives</summary>
+            <param name="vertices">Primitive vertices</param>
+            <param name="startVertex">Index of vertex to begin drawing with</param>
+            <param name="vertexCount">Number of vertices to draw</param>
+            <param name="type">Type of primitives to draw</param>
+            <param name="context">Desired graphics device settings for the primitives</param>
+        </member>
+        <member name="F:Nuclex.Fonts.Graphics.Batching.Queuer`1.BatchDrawer">
+            <summary>Vertex batch drawer used to send vertex batches to the GPU</summary>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.DeferredQueuer`1.#ctor(Nuclex.Fonts.Graphics.Batching.IBatchDrawer{`0})">
+            <summary>Initializes a new deferred primitive queuer</summary>
+            <param name="batchDrawer">
+              Batch drawer that will be used to render completed vertex batches
+            </param>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.DeferredQueuer`1.Begin">
+            <summary>Informs the queuer that a new drawing cycle is about to start</summary>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.DeferredQueuer`1.End">
+            <summary>Informs the queuer that the current drawing cycle has ended</summary>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.DeferredQueuer`1.Queue(`0[],System.Int32,System.Int32,Microsoft.Xna.Framework.Graphics.PrimitiveType,Nuclex.Fonts.Graphics.Batching.DrawContext)">
+            <summary>Queues a series of primitives</summary>
+            <param name="vertices">Primitive vertices</param>
+            <param name="startVertex">Index of vertex to begin drawing with</param>
+            <param name="vertexCount">Number of vertices to draw</param>
+            <param name="type">Type of primitives to draw</param>
+            <param name="context">Desired graphics device settings for the primitives</param>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.DeferredQueuer`1.Queue(`0[],System.Int32,System.Int32,System.Int16[],System.Int32,System.Int32,Microsoft.Xna.Framework.Graphics.PrimitiveType,Nuclex.Fonts.Graphics.Batching.DrawContext)">
+            <summary>Queues a series of indexed primitives</summary>
+            <param name="vertices">Primitive vertices</param>
+            <param name="startVertex">
+              Index in the vertex array of the first vertex. This vertex will become
+              the new index 0 for the index buffer.
+            </param>
+            <param name="vertexCount">Number of vertices to draw</param>
+            <param name="indices">Indices of the vertices to draw</param>
+            <param name="startIndex">Index of the vertex index to begin drawing with</param>
+            <param name="indexCount">Number of vertex indices to draw</param>
+            <param name="type">Type of primitives to draw</param>
+            <param name="context">Desired graphics device settings for the primitives</param>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.DeferredQueuer`1.queueVerticesNoOverflow(`0[],System.Int32,System.Int32,Microsoft.Xna.Framework.Graphics.PrimitiveType,Nuclex.Fonts.Graphics.Batching.DrawContext)">
+            <summary>
+              Queues the provided vertices for deferred rendering when there is enough
+              space left in the current batch to hold all vertices
+            </summary>
+            <param name="vertices">Primitive vertices</param>
+            <param name="startVertex">
+              Index in the vertex array of the first vertex. This vertex will become
+              the new index 0 for the index buffer.
+            </param>
+            <param name="vertexCount">Number of vertices to draw</param>
+            <param name="type">Type of primitives to draw</param>
+            <param name="context">Desired graphics device settings for the primitives</param>
+            <remarks>
+              This is a special optimized method for adding vertices when the amount of
+              vertices to render does not exceed available batch space, which should be
+              the default usage of a vertex batcher.
+            </remarks>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.DeferredQueuer`1.queueIndexedVerticesNoOverflow(`0[],System.Int32,System.Int32,System.Int16[],System.Int32,System.Int32,Microsoft.Xna.Framework.Graphics.PrimitiveType,Nuclex.Fonts.Graphics.Batching.DrawContext)">
+            <summary>Queues the provided indexed vertices for deferred rendering</summary>
+            <param name="vertices">Primitive vertices</param>
+            <param name="startVertex">
+              Index in the vertex array of the first vertex. This vertex will become
+              the new index 0 for the index buffer.
+            </param>
+            <param name="vertexCount">Number of vertices to draw</param>
+            <param name="indices">Indices of the vertices to draw</param>
+            <param name="startIndex">Index of the vertex index to begin drawing with</param>
+            <param name="indexCount">Number of vertex indices to draw</param>
+            <param name="type">Type of primitives to draw</param>
+            <param name="context">Desired graphics device settings for the primitives</param>
+            <remarks>
+              This is a special optimized method for adding vertices when the amount of
+              vertices to render does not exceed available batch space, which should be
+              the default usage of a vertex batcher.
+            </remarks>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.DeferredQueuer`1.flush">
+            <summary>Flushes the queued vertices to the graphics card</summary>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.DeferredQueuer`1.reset">
+            <summary>Resets the internal buffers to the empty state</summary>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.DeferredQueuer`1.createNewOperationIfNecessary(Microsoft.Xna.Framework.Graphics.PrimitiveType,Nuclex.Fonts.Graphics.Batching.DrawContext)">
+            <summary>
+              Creates a new rendering operation if the drawing context or primitive type
+              have changed since the last call
+            </summary>
+            <param name="type">Primitive type of the upcoming vertices</param>
+            <param name="context">Drawing context used by the upcoming vertices</param>
+        </member>
+        <member name="F:Nuclex.Fonts.Graphics.Batching.DeferredQueuer`1.operations">
+            <summary>All vertex batches enqueued for rendering so far</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.Graphics.Batching.DeferredQueuer`1.currentOperation">
+            <summary>Cached reference to the current RenderOperation</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.Graphics.Batching.DeferredQueuer`1.vertices">
+            <summary>Queued vertices</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.Graphics.Batching.DeferredQueuer`1.usedVertexCount">
+            <summary>Number of used vertices in the vertex array</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.Graphics.Batching.DeferredQueuer`1.indices">
+            <summary>Queued indices</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.Graphics.Batching.DeferredQueuer`1.usedIndexCount">
+            <summary>Number of used indices in the index array</summary>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.DeferredQueuer`1.queueVerticesBufferSplit(`0[],System.Int32,System.Int32,Microsoft.Xna.Framework.Graphics.PrimitiveType,Nuclex.Fonts.Graphics.Batching.DrawContext,System.Int32)">
+            <summary>
+              Queues the provided vertices for deferred rendering, doing one or more
+              intermediate flushes when the vertex batch is full
+            </summary>
+            <param name="vertices">Primitive vertices</param>
+            <param name="startVertex">
+              Index in the vertex array of the first vertex. This vertex will become
+              the new index 0 for the index buffer.
+            </param>
+            <param name="vertexCount">Number of vertices to draw</param>
+            <param name="type">Type of primitives to draw</param>
+            <param name="context">Desired graphics device settings for the primitives</param>
+            <param name="spaceLeft">Amount of space left in the current batch</param>
+            <remarks>
+              This is a special optimized method for adding vertices when the amount of
+              vertices to render does not exceed available batch space, which should be
+              the default usage of a vertex batcher.
+            </remarks>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.DeferredQueuer`1.queueIndexedVerticesBufferSplit(`0[],System.Int32,System.Int32,System.Int16[],System.Int32,System.Int32,Microsoft.Xna.Framework.Graphics.PrimitiveType,Nuclex.Fonts.Graphics.Batching.DrawContext,System.Int32)">
+            <summary>
+              Queues the provided vertices for deferred rendering, doing one or more
+              intermediate flushes when the vertex batch is full
+            </summary>
+            <param name="vertices">Primitive vertices</param>
+            <param name="startVertex">
+              Index in the vertex array of the first vertex. This vertex will become
+              the new index 0 for the index buffer.
+            </param>
+            <param name="vertexCount">Number of vertices to draw</param>
+            <param name="indices">Indices of the vertices to draw</param>
+            <param name="startIndex">Index of the vertex index to begin drawing with</param>
+            <param name="indexCount">Number of vertex indices to draw</param>
+            <param name="type">Type of primitives to draw</param>
+            <param name="context">Desired graphics device settings for the primitives</param>
+            <param name="spaceLeft">Amount of space left in the current batch</param>
+            <remarks>
+              This is a special optimized method for adding vertices when the amount of
+              vertices to render does not exceed available batch space, which should be
+              the default usage of a vertex batcher.
+            </remarks>
+        </member>
+        <member name="T:Nuclex.Fonts.Graphics.Batching.DeferredQueuer`1.RenderOperation">
+            <summary>Set of primitives that can be drawn in a single run</summary>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.DeferredQueuer`1.RenderOperation.#ctor(System.Int32,Microsoft.Xna.Framework.Graphics.PrimitiveType,Nuclex.Fonts.Graphics.Batching.DrawContext)">
+            <summary>Initializes a new render operation</summary>
+            <param name="startIndex">Starting index of the RenderOperation</param>
+            <param name="primitiveType">What kind of primitives to draw</param>
+            <param name="drawContext">Controls the graphics device settings</param>
+        </member>
+        <member name="F:Nuclex.Fonts.Graphics.Batching.DeferredQueuer`1.RenderOperation.StartIndex">
+            <summary>First index to draw</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.Graphics.Batching.DeferredQueuer`1.RenderOperation.EndIndex">
+            <summary>Index after the last index to draw</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.Graphics.Batching.DeferredQueuer`1.RenderOperation.PrimitiveType">
+            <summary>Type of primitives to draw</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.Graphics.Batching.DeferredQueuer`1.RenderOperation.DrawContext">
+            <summary>Draw context controlling the graphics device settings</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.Graphics.Batching.DeferredQueuer`1.RenderOperation.BaseVertexIndex">
+            <summary>Base vertex index for the vertex buffer in this operation</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.Graphics.Batching.DeferredQueuer`1.RenderOperation.VertexCount">
+            <summary>Number of vertices used in the operation</summary>
+        </member>
+        <member name="T:Nuclex.Fonts.Graphics.Batching.DynamicBufferBatchDrawer`1">
+            <summary>Draws batched vertices using a dynamic vertex buffer</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.Graphics.Batching.DynamicBufferBatchDrawer`1.Divisions">
+            <summary>Number of regions the vertex buffer is divided into</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.Graphics.Batching.DynamicBufferBatchDrawer`1.DiscardIfPossible">
+            <summary>
+              Equivalent to SetDataOptions.Discard if supported by the target platform
+            </summary>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.DynamicBufferBatchDrawer`1.#ctor(Microsoft.Xna.Framework.Graphics.GraphicsDevice)">
+            <summary>Initializes a new dynamic vertex buffer based batch drawer</summary>
+            <param name="graphicsDevice">
+              Graphics device that will be used for rendering
+            </param>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.DynamicBufferBatchDrawer`1.Dispose">
+            <summary>Immediately releases all resources owned by the instance</summary>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.DynamicBufferBatchDrawer`1.Select(`0[],System.Int32,System.Int16[],System.Int32)">
+            <summary>Selects the vertices that will be used for drawing</summary>
+            <param name="vertices">Primitive vertices</param>
+            <param name="vertexCount">Number of vertices to draw</param>
+            <param name="indices">Indices of the vertices to draw</param>
+            <param name="indexCount">Number of vertex indices to draw</param>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.DynamicBufferBatchDrawer`1.Select(`0[],System.Int32)">
+            <summary>Selects the vertices that will be used for drawing</summary>
+            <param name="vertices">Primitive vertices</param>
+            <param name="vertexCount">Number of vertices to draw</param>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.DynamicBufferBatchDrawer`1.Draw(System.Int32,System.Int32,System.Int32,System.Int32,Microsoft.Xna.Framework.Graphics.PrimitiveType,Nuclex.Fonts.Graphics.Batching.DrawContext)">
+            <summary>Draws a batch of indexed primitives</summary>
+            <param name="startVertex">
+              Index of the first vertex in the vertex array. This vertex will become
+              the new index 0 for the index buffer.
+            </param>
+            <param name="vertexCount">Number of vertices used in the call</param>
+            <param name="startIndex">
+              Position at which to begin processing the index array
+            </param>
+            <param name="indexCount">Number of indices that will be processed</param>
+            <param name="type">Type of primitives to draw</param>
+            <param name="context">Desired graphics device settings for the primitives</param>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.DynamicBufferBatchDrawer`1.Draw(System.Int32,System.Int32,Microsoft.Xna.Framework.Graphics.PrimitiveType,Nuclex.Fonts.Graphics.Batching.DrawContext)">
+            <summary>Draws a batch of primitives</summary>
+            <param name="startVertex">Index of vertex to begin drawing with</param>
+            <param name="vertexCount">Number of vertices used</param>
+            <param name="type">Type of primitives that will be drawn</param>
+            <param name="context">Desired graphics device settings for the primitives</param>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.DynamicBufferBatchDrawer`1.unselectBuffers">
+            <summary>Deselects the index and vertex buffers</summary>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.DynamicBufferBatchDrawer`1.selectBuffers(System.Int32)">
+            <summary>Selects the index and vertex buffers</summary>
+            <param name="divisionIndex">Index of the division to select</param>
+        </member>
+        <member name="F:Nuclex.Fonts.Graphics.Batching.DynamicBufferBatchDrawer`1.graphicsDevice">
+            <summary>Graphics device being used for rendering</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.Graphics.Batching.DynamicBufferBatchDrawer`1.vertexBuffer">
+            <summary>Dynamic VertexBuffer used to render batches</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.Graphics.Batching.DynamicBufferBatchDrawer`1.indexBuffer">
+            <summary>Dynamic IndexBuffer used to render batches</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.Graphics.Batching.DynamicBufferBatchDrawer`1.currentDivisionIndex">
+            <summary>Division that will be filled next</summary>
+        </member>
+        <member name="F:Nuclex.Fonts.Graphics.Batching.DynamicBufferBatchDrawer`1.stride">
+            <summary>Size, in bytes, of a single vertex</summary>
+        </member>
+        <member name="P:Nuclex.Fonts.Graphics.Batching.DynamicBufferBatchDrawer`1.MaximumBatchSize">
+            <summary>
+              Maximum number of vertices or indices a single batch is allowed to have
+            </summary>
+        </member>
+        <member name="T:Nuclex.Fonts.Graphics.Batching.ImmediateQueuer`1">
+            <summary>Draws any vertices sent to it immediately</summary>
+            <remarks>
+              This is the simplest possible queuer. It will draw any vertices handed to
+              it immediately. This causes a large number of DrawPrimitive() calls, which
+              will have a drastic impact on performance (DirectX 9.0 level games are expected
+              to have only a few hundred DrawPrimitive calls per frame). It is advisable to
+              use this queuer only if you have a very few primitive batches to draw.
+            </remarks>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.ImmediateQueuer`1.#ctor(Nuclex.Fonts.Graphics.Batching.IBatchDrawer{`0})">
+            <summary>Initializes a new immediate primitive queuer</summary>
+            <param name="batchDrawer">
+              Batch drawer that will be used to render completed vertex batches
+            </param>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.ImmediateQueuer`1.Queue(`0[],System.Int32,System.Int32,System.Int16[],System.Int32,System.Int32,Microsoft.Xna.Framework.Graphics.PrimitiveType,Nuclex.Fonts.Graphics.Batching.DrawContext)">
+            <summary>Queues a series of indexed primitives</summary>
+            <param name="vertices">Primitive vertices</param>
+            <param name="startVertex">
+              Index in the vertex array of the first vertex. This vertex will become
+              the new index 0 for the index buffer.
+            </param>
+            <param name="vertexCount">Number of vertices to draw</param>
+            <param name="indices">Indices of the vertices to draw</param>
+            <param name="startIndex">Index of the vertex index to begin drawing with</param>
+            <param name="indexCount">Number of vertex indices to draw</param>
+            <param name="type">Type of primitives to draw</param>
+            <param name="context">Desired graphics device settings for the primitives</param>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.Batching.ImmediateQueuer`1.Queue(`0[],System.Int32,System.Int32,Microsoft.Xna.Framework.Graphics.PrimitiveType,Nuclex.Fonts.Graphics.Batching.DrawContext)">
+            <summary>Queues a series of primitives</summary>
+            <param name="vertices">Primitive vertices</param>
+            <param name="startVertex">Index of vertex to begin drawing with</param>
+            <param name="vertexCount">Number of vertices to draw</param>
+            <param name="type">Type of primitives to draw</param>
+            <param name="context">Desired graphics device settings for the primitives</param>
+        </member>
+        <member name="T:Nuclex.Fonts.Graphics.VertexHelper">
+            <summary>Provides some supporting functions for working with vertices</summary>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.VertexHelper.GetPrimitiveCount(System.Int32,Microsoft.Xna.Framework.Graphics.PrimitiveType)">
+            <summary>
+              Calculates the number of primitives given the number of vertices (or indices)
+              and the type of primitives to be drawn.
+            </summary>
+            <param name="verticesOrIndices">Number of vertices or indices</param>
+            <param name="type">Type of primitives the vertices will be processed as</param>
+            <returns>The number of primitives that can be built from the vertices</returns>
+        </member>
+        <member name="M:Nuclex.Fonts.Graphics.VertexHelper.IsValidVertexCount(System.Int32,Microsoft.Xna.Framework.Graphics.PrimitiveType)">
+            <summary>
+              Checks whether a vertex count is valid for the specified type of primitives
+            </summary>
+            <param name="verticesOrIndices">Number of vertices or indices</param>
+            <param name="type">Type of primitives the vertices will be processed as</param>
+            <returns>
+              True if the specified number is a valid vertex count for the specified
+              type of primitives
+            </returns>
+            <remarks>
+              A zero check is expected to be done in addition to this method. Negative
+              vertex or index counts will result in undefined behavior.
+            </remarks>
+        </member>
+    </members>
+</doc>

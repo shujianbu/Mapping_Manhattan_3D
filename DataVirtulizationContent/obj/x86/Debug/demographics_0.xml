@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Graphics="Microsoft.Xna.Framework.Content.Pipeline.Graphics" xmlns:Framework="Microsoft.Xna.Framework">
+  <Asset Type="Graphics:NodeContent">
+    <Name>SketchUp</Name>
+    <Identity>
+      <SourceFilename>C:\Users\Pucong Han\Desktop\DataVirtulization\DataVirtulization\DataVirtulizationContent\demographics.fbx</SourceFilename>
+      <SourceTool>FbxImporter</SourceTool>
+    </Identity>
+    <Transform>2.54 0 0 0 0 7.19523466E-16 -2.54 0 0 2.54 7.19523466E-16 0 0 0 0 1</Transform>
+    <Children>
+      <Child>
+        <Name>instance_0</Name>
+        <Transform>0.99999994 0 0 0 0 1 3.59575738E-24 0 0 -3.59575738E-24 1 0 0 0 0 1</Transform>
+        <Children>
+          <Child Type="Graphics:MeshContent">
+            <Name>skp2esHGq</Name>
+            <Transform>0.99999994 0 0 0 0 1 3.59575738E-24 0 0 -3.59575738E-24 1 0 0 0 0 1</Transform>
+            <Children>
+              <Child Type="Graphics:MeshContent">
+                <Name>ID12</Name>
+                <Transform>0.99999994 0 0 0 0 1 3.59575738E-24 0 0 -3.59575738E-24 1 0 0 0 0 1</Transform>
+                <Positions>-984.251953 0 -984.251953 -984.251953 0 984.251953 984.251953 0 984.251953 984.251953 0 -984.251953 984.251953 0 -984.251953 984.251953 0 984.251953 -984.251953 0 984.251953 -984.251953 0 -984.251953</Positions>
+                <Geometry>
+                  <Batch>
+                    <Material>#Resource1</Material>
+                    <Indices>2 1 0 0 3 2 6 5 4 4 7 6</Indices>
+                    <Vertices>
+                      <PositionIndices>0 1 2 3 4 5 6 7</PositionIndices>
+                      <Channels>
+                        <VertexChannel Name="Normal0" ElementType="Framework:Vector3">0 1 0 0 1 0 0 1 0 0 1 0 -0 -1 -0 -0 -1 -0 -0 -1 -0 -0 -1 -0</VertexChannel>
+                      </Channels>
+                    </Vertices>
+                  </Batch>
+                </Geometry>
+              </Child>
+              <Child Type="Graphics:MeshContent">
+                <Name>ID18</Name>
+                <Transform>0.99999994 0 0 0 0 1 3.59575738E-24 0 0 -3.59575738E-24 1 0 0 0 0 1</Transform>
+                <Positions>0 -1574.8031 0 -984.251953 0 -984.251953 984.251953 0 -984.251953 984.251953 0 -984.251953 -984.251953 0 -984.251953 0 -1574.8031 0</Positions>
+                <Geometry>
+                  <Batch>
+                    <Material>#Resource1</Material>
+                    <Indices>2 1 0 5 4 3</Indices>
+                    <Vertices>
+                      <PositionIndices>0 1 2 3 4 5</PositionIndices>
+                      <Channels>
+                        <VertexChannel Name="Normal0" ElementType="Framework:Vector3">0 -0.5299989 -0.8479983 0 -0.5299989 -0.8479983 0 -0.5299989 -0.8479983 -0 0.5299989 0.8479983 -0 0.5299989 0.8479983 -0 0.5299989 0.8479983</VertexChannel>
+                      </Channels>
+                    </Vertices>
+                  </Batch>
+                </Geometry>
+              </Child>
+              <Child Type="Graphics:MeshContent">
+                <Name>ID24</Name>
+                <Transform>0.99999994 0 0 0 0 1 3.59575738E-24 0 0 -3.59575738E-24 1 0 0 0 0 1</Transform>
+                <Positions>0 -1574.8031 0 984.251953 0 -984.251953 984.251953 0 984.251953 984.251953 0 984.251953 984.251953 0 -984.251953 0 -1574.8031 0</Positions>
+                <Geometry>
+                  <Batch>
+                    <Material>#Resource1</Material>
+                    <Indices>2 1 0 5 4 3</Indices>
+                    <Vertices>
+                      <PositionIndices>0 1 2 3 4 5</PositionIndices>
+                      <Channels>
+                        <VertexChannel Name="Normal0" ElementType="Framework:Vector3">0.8479983 -0.5299989 0 0.8479983 -0.5299989 0 0.8479983 -0.5299989 0 -0.8479983 0.5299989 -0 -0.8479983 0.5299989 -0 -0.8479983 0.5299989 -0</VertexChannel>
+                      </Channels>
+                    </Vertices>
+                  </Batch>
+                </Geometry>
+              </Child>
+              <Child Type="Graphics:MeshContent">
+                <Name>ID30</Name>
+                <Transform>0.99999994 0 0 0 0 1 3.59575738E-24 0 0 -3.59575738E-24 1 0 0 0 0 1</Transform>
+                <Positions>0 -1574.8031 0 -984.251953 0 984.251953 -984.251953 0 -984.251953 -984.251953 0 -984.251953 -984.251953 0 984.251953 0 -1574.8031 0</Positions>
+                <Geometry>
+                  <Batch>
+                    <Material>#Resource1</Material>
+                    <Indices>2 1 0 5 4 3</Indices>
+                    <Vertices>
+                      <PositionIndices>0 1 2 3 4 5</PositionIndices>
+                      <Channels>
+                        <VertexChannel Name="Normal0" ElementType="Framework:Vector3">-0.8479983 -0.5299989 0 -0.8479983 -0.5299989 0 -0.8479983 -0.5299989 0 0.8479983 0.5299989 -0 0.8479983 0.5299989 -0 0.8479983 0.5299989 -0</VertexChannel>
+                      </Channels>
+                    </Vertices>
+                  </Batch>
+                </Geometry>
+              </Child>
+            </Children>
+            <Positions>0 -1574.8031 0 984.251953 0 984.251953 -984.251953 0 984.251953 -984.251953 0 984.251953 984.251953 0 984.251953 0 -1574.8031 0</Positions>
+            <Geometry>
+              <Batch>
+                <Material>#Resource1</Material>
+                <Indices>2 1 0 5 4 3</Indices>
+                <Vertices>
+                  <PositionIndices>0 1 2 3 4 5</PositionIndices>
+                  <Channels>
+                    <VertexChannel Name="Normal0" ElementType="Framework:Vector3">0 -0.5299989 0.8479983 0 -0.5299989 0.8479983 0 -0.5299989 0.8479983 -0 0.5299989 -0.8479983 -0 0.5299989 -0.8479983 -0 0.5299989 -0.8479983</VertexChannel>
+                  </Channels>
+                </Vertices>
+              </Batch>
+            </Geometry>
+          </Child>
+        </Children>
+      </Child>
+    </Children>
+  </Asset>
+  <Resources>
+    <Resource ID="#Resource1" Type="Graphics:BasicMaterialContent">
+      <Name>Layer_Layer0</Name>
+      <Identity>
+        <SourceFilename>C:\Users\Pucong Han\Desktop\DataVirtulization\DataVirtulization\DataVirtulizationContent\demographics.fbx</SourceFilename>
+        <SourceTool>FbxImporter</SourceTool>
+      </Identity>
+      <OpaqueData>
+        <Data Key="DiffuseColor" Type="Framework:Vector3">0 0.4 0.6</Data>
+        <Data Key="EmissiveColor" Type="Framework:Vector3">0 0 0</Data>
+        <Data Key="Alpha" Type="float">1</Data>
+        <Data Key="SpecularColor" Type="Framework:Vector3">0 0 0</Data>
+      </OpaqueData>
+    </Resource>
+  </Resources>
+</XnaContent>
